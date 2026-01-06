@@ -1,6 +1,11 @@
 # wafprompt
 silly little prompt for bash terminals! working on features for this, not compatible with other prompts i would assume :p
 
+## how do i use this?
+all you need to do is run `isntall.sh` and then `source ~/.bashrc`, that simple!
+
+this copies the files `.bashpre`, `.bashsetup`, and `.bashprompt` to your home directory, and it adds a few lines to your `.bashrc`.
+
 ## what are you doing to my terminal??
 this prompt uses the following bash exports:
 - `$PROMPT_COMMAND` (used in bash)
