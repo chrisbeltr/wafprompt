@@ -1,2 +1,20 @@
 # wafprompt
-silly little prompt! working on features for this, not compatible with other prompts i would assume :p
+silly little prompt for bash terminals! working on features for this, not compatible with other prompts i would assume :p
+
+## what are you doing to my terminal??
+this prompt uses the following bash exports:
+- `$PROMPT_COMMAND` (used in bash)
+- `$PROMPT_STARTED`
+- `$PROMPT_START`
+- `$PROMPT_END`
+- `$PROMPT_DIFF`
+- `$PROMPT_TIME`
+- `$PS1` (used in bash)
+- `$p_{prompt segments}` and `$p_colors`
+
+the following utilities are required:
+- `bash`
+- `tty`
+- `grep -P -o`
+- `trap "" DEBUG`
+- `date`
