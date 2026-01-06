@@ -1,0 +1,4 @@
+if [ $PROMPT_STARTED -ne 1 ]; then
+	export PROMPT_STARTED=1
+	export PROMPT_START="$(date +%s)"
+fi

@@ -1,0 +1,30 @@
+# custom prompt
+
+export PROMPT_END="$(date +%s)"; export PROMPT_DIFF="$((PROMPT_END - PROMPT_START))"; export PROMPT_TIME="$(date -u -d@$PROMPT_DIFF +%H:%M:%S)"
+export PROMPT_STARTED=0
+
+p_red="\[\033[91m\]"
+p_yellow="\[\033[33m\]"
+p_green="\[\033[32m\]"
+p_teal="\[\033[36m\]"
+p_blue="\[\033[34m\]"
+p_gray="\[\033[90m\]"
+p_normal="\[\033[0m\]"
+
+declare -a p_colors=(
+[0]="$p_red"
+[1]="$p_yellow"
+[2]="$p_green"
+[3]="$p_teal"
+[4]="$p_blue"
+)
+
+p_user="${p_colors[RANDOM % 5]}\u$p_normal"
+p_dir="${p_colors[RANDOM % 5]}\w$p_normal"
+p_machine="${p_colors[RANDOM % 5]}\h$p_normal"
+p_tty="${p_colors[RANDOM % 5]}$(tty | grep -P -o '(?<=\/dev\/)(?:[a-zA-Z0-9]+\/?)+')$p_normal"
+p_time="${p_colors[RANDOM % 5]}\@$p_normal"
+p_face="${p_colors[RANDOM % 5]}:3$p_normal"
+p_delim="$p_gray~$p_normal"
+p_elapsed="${p_colors[RANDOM % 5]}$PROMPT_TIME$p_normal"
+PS1="$p_user in $p_dir on $p_machine:$p_tty at $p_time $p_face :: [$p_elapsed]\n$p_delim "
