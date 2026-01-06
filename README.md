@@ -18,3 +18,6 @@ the following utilities are required:
 - `grep -P -o`
 - `trap "" DEBUG`
 - `date`
+
+## you want to... contibute?
+feel free to make a pull request! i don't usually make bash scripts, so i could probably do something better :3
