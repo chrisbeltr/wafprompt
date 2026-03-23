@@ -2,9 +2,9 @@
 silly little prompt for bash terminals! working on features for this, not compatible with other prompts i would assume :p
 
 ## how do i use this?
-all you need to do is run `install.sh` and then `source ~/.bashrc`, that simple! after that, it will be set up every time you open your terminal.
+all you need to do is run `install.sh`, add the line `source ~/.bashsetup` to your `.bashrc` file, and then run `source ~/.bashrc` or restart your terminal, that simple! after that, it will be set up every time you open your terminal.
 
-this copies the files `.bashpre`, `.bashsetup`, and `.bashprompt` to your home directory, and it adds a few lines to your `.bashrc`.
+this copies the files `.bashpre`, `.bashsetup`, and `.bashprompt` to your home directory, and the `.bashsetup` script sets the command prompt.
 
 ## what are you doing to my terminal??
 this prompt uses the following bash exports:
