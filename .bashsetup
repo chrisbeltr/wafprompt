@@ -1,4 +1,3 @@
-trap 'source ~/.bashpre' DEBUG
 export PROMPT_STARTED=0
-# echo "hii"
+trap 'source ~/.bashpre' DEBUG
 export PROMPT_COMMAND=("${PROMPT_COMMAND[@]}" "echo ;source ~/.bashprompt")
