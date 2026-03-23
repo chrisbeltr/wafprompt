@@ -24,5 +24,8 @@ the following utilities are required:
 - `trap "" DEBUG`
 - `date`
 
+> [!WARNING]
+> the `install.sh` script appends a command to the `.bashrc` file in your home directory. it's kinda import that this line stays at the very bottom of your `.bashrc` file. if you add another service that modifies `$PROMPT_COMMAND`, wafprompt needs to modify it last, otherwise the command timer will not work properly.
+
 ## you want to... contibute?
 feel free to make a pull request! i don't usually make bash scripts, so i could probably do something better :3
